@@ -1,3 +1,4 @@
+
 /**
  * This class represents a simple picture. You can draw the picture using
  * the draw method. But wait, there's more: being an electronic picture, it
@@ -17,6 +18,7 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private Square field;
+    private Person gente;
 
     /**
      * Constructor for objects of class Picture
@@ -73,6 +75,11 @@ public class Picture
     public void atardecer()
     {
         sun.slowMoveVertical(140);
+        gente = new Person();
+        gente.moveVertical(20);
+        gente.moveHorizontal(-330);
+        gente.makeVisible();
+        gente.slowMoveHorizontal(360);
     }
     
     /**
