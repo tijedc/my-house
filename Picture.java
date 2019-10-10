@@ -9,13 +9,14 @@
  * @author  Michael Kolling and David J. Barnes
  * @version 2011.07.31
  */
+//ughjhfj
 public class Picture
 {
     private Square wall;
     private Square window;
     private Triangle roof;
     private Circle sun;
-    private Square fild;
+    private Square field;
 
     /**
      * Constructor for objects of class Picture
@@ -49,12 +50,12 @@ public class Picture
         roof.moveVertical(-60);
         roof.makeVisible();
         
-        fild = new Square();
-        fild.changeColor("green");
-        fild.moveHorizontal(-330);
-        fild.moveVertical(130);
-        fild.changeSize(2000);
-        fild.makeVisible();
+        field = new Square();
+        field.changeColor("green");
+        field.moveHorizontal(-330);
+        field.moveVertical(130);
+        field.changeSize(2000);
+        field.makeVisible();
 
         sun = new Circle();
         sun.changeColor("yellow");
@@ -65,7 +66,15 @@ public class Picture
         sun.slowMoveVertical(-140);
         
     }
-
+    
+    /**
+     *  Atardece y el sol baja hacia abajo verticalmente
+     */
+    public void atardecer()
+    {
+        sun.slowMoveVertical(140);
+    }
+    
     /**
      * Change this picture to black/white display
      */
